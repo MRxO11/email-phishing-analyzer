@@ -27,22 +27,6 @@ A modern AI-powered tool to analyze emails for potential phishing attacks. This 
 
 ---
 
-## Project Structure
-
-```
-phish_extn/
-├─ backend/
-│  ├─ server.js          # Node.js backend server
-│  ├─ package.json       # Dependencies
-├─ extension/
-│  ├─ manifest.json      # Browser extension manifest
-│  ├─ popup.html         # UI popup
-│  ├─ popup.js           # Extension logic
-│  ├─ style.css          # UI styling
-├─ icon.png              # Extension icon
-└─ README.md
-```
-
 ---
 
 ## Installation
