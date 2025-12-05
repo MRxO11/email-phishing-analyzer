@@ -47,7 +47,6 @@ Body: ${body}
 `;
 
   try {
-    // WINDOWS SAFE: send prompt via stdin (input)
     const result = spawnSync("ollama", ["run", "llama2"], {
       input: prompt,
       encoding: "utf8"
@@ -61,7 +60,6 @@ Body: ${body}
     const output = result.stdout.trim();
     console.log("Ollama Output:", output);
 
-    // Extract JSON from model output
     let data;
     try {
       const jsonMatch = output.match(/\{[\s\S]*\}/);
@@ -70,7 +68,6 @@ Body: ${body}
     } catch (err) {
       console.error("JSON parse failed:", err.message);
 
-      // Fallback
       return res.json({
         risk: "SUSPICIOUS",
         red_flags: ["AI failed to generate structured JSON"],
